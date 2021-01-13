@@ -1,0 +1,29 @@
+// COLORS
+$color_1: rgba(248,248,248, 1);
+$color_1_85: rgba(248,248,248, 0.85);
+$color_2: rgba(209,209,209, 1);
+$color_2_85: rgba(209,209,209, 0.85);
+$color_3: rgba(62,122,162, 1);
+$color_3_85: rgba(62,122,162, 0.85);
+
+$color_font: #333;
+$color_error: #F74545;
+
+$size-xs: 0;
+$size-sm: 576px;
+$size-md: 768px;
+$size-lg: 992px;
+$size-xl: 1200px;
+
+$grid-breakpoints: (
+  xs: $size-xs,
+  sm: $size-sm,
+  md: $size-md,
+  lg: $size-lg,
+  xl: $size-xl
+);
+$border-radius: 3px;
+$padding: 25px;
+
+$page-width: 1000px;
+
