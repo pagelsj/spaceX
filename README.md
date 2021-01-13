@@ -1,27 +1,37 @@
-# SpaceX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+# ATOS: SpaceX
 
-## Development server
+The SpaceX Website was built using the Angular framework using a very simple UI styling 'framework' that built on top of the Bootstrap Grid Framework.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I also gave myself an 2 hour window to complete the task.
 
-## Code scaffolding
+## Building and deploying
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install and deploy steps
 
-## Build
+ 1. Clone the repository using git-cli.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    `git clone git@github.com:pagelsj/spaceX.git`
+2. Install all the needed packages using npm, or yarn.
 
-## Running unit tests
+    `npm install` or `yarn install`
+3. The project and all dependencies will now be installed and ready to run.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    `ng serve`
 
-## Running end-to-end tests
+## Assumptions
+The website needed to be:
+1. Maintainable
+2. Make use of re-usable code
+3. Extendable
+4. Follow the Angular Style-guide
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Interesting parts
+1. 3rd party CSS frameworks are precompiled into the style.css file rather than being loaded in the index.html file. Leading to less HTTP requests.
+2. Most of the styling is reusable and created in a way that it would be able to be built out into a custom CSS Framework.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Improvements
+1. I would have loved to add unit tests!
+2. I would have built the pages using routing. (This was not done however due to lack of complexity within the task. Routing within the application was not needed at this point)
+3. Adding the ability to filter the mission launches by name or date of launch.
+4. Given more time I would have liked to add state management. (NGRX or NGXS)
