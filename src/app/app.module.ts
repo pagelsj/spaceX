@@ -8,7 +8,8 @@ import {
   LaunchDetailsComponent
 } from './components/index';
 import {
-  SpaceXApiService
+  SpaceXApiService,
+  ManipulateDataService
 } from './services/index';
 
 @NgModule({
@@ -22,7 +23,8 @@ import {
     HttpClientModule
   ],
   providers: [
-    SpaceXApiService
+    SpaceXApiService,
+    ManipulateDataService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { SpaceXApiService } from './services/index';
+
+import { LaunchModel } from './interfaces/index';
+import {
+  SpaceXApiService,
+  ManipulateDataService
+} from './services/index';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +12,17 @@ import { SpaceXApiService } from './services/index';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  launchData: any;
+  launchData: Array<LaunchModel>;
 
   constructor (
-    private spaceXApiService: SpaceXApiService
+    private spaceXApiService: SpaceXApiService,
+    private dataService: ManipulateDataService
   ) { }
 
   ngOnInit() {
     this.spaceXApiService.load().subscribe(data => {
       console.log("data: ", data);
-      this.launchData = data;
+      this.launchData = this.dataService.all(data);
     })
   }
 }
